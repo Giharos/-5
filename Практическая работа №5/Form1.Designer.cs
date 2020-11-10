@@ -68,6 +68,8 @@
             this.button7 = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.button10 = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
             this.button9 = new System.Windows.Forms.Button();
             this.scalproizv = new System.Windows.Forms.TextBox();
             this.button8 = new System.Windows.Forms.Button();
@@ -85,8 +87,9 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.button10 = new System.Windows.Forms.Button();
+            this.суммаВекторовToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.скалярноеПроизведениеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.очисткаВекторовToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -121,7 +124,10 @@
             this.умножениеНаЧислоToolStripMenuItem,
             this.проверкаНаРавенствоToolStripMenuItem,
             this.суммаСДругойТриадойToolStripMenuItem,
-            this.очиститьToolStripMenuItem});
+            this.очиститьToolStripMenuItem,
+            this.суммаВекторовToolStripMenuItem,
+            this.скалярноеПроизведениеToolStripMenuItem,
+            this.очисткаВекторовToolStripMenuItem});
             this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
             this.файлToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.файлToolStripMenuItem.Text = "Файл";
@@ -129,35 +135,35 @@
             // суммаТриадыСЧисломToolStripMenuItem
             // 
             this.суммаТриадыСЧисломToolStripMenuItem.Name = "суммаТриадыСЧисломToolStripMenuItem";
-            this.суммаТриадыСЧисломToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.суммаТриадыСЧисломToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
             this.суммаТриадыСЧисломToolStripMenuItem.Text = "Сумма триады с числом";
             this.суммаТриадыСЧисломToolStripMenuItem.Click += new System.EventHandler(this.button1_Click);
             // 
             // умножениеНаЧислоToolStripMenuItem
             // 
             this.умножениеНаЧислоToolStripMenuItem.Name = "умножениеНаЧислоToolStripMenuItem";
-            this.умножениеНаЧислоToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.умножениеНаЧислоToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
             this.умножениеНаЧислоToolStripMenuItem.Text = "Умножение на число ";
             this.умножениеНаЧислоToolStripMenuItem.Click += new System.EventHandler(this.button2_Click);
             // 
             // проверкаНаРавенствоToolStripMenuItem
             // 
             this.проверкаНаРавенствоToolStripMenuItem.Name = "проверкаНаРавенствоToolStripMenuItem";
-            this.проверкаНаРавенствоToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.проверкаНаРавенствоToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
             this.проверкаНаРавенствоToolStripMenuItem.Text = "Проверка на равенство";
             this.проверкаНаРавенствоToolStripMenuItem.Click += new System.EventHandler(this.button3_Click);
             // 
             // суммаСДругойТриадойToolStripMenuItem
             // 
             this.суммаСДругойТриадойToolStripMenuItem.Name = "суммаСДругойТриадойToolStripMenuItem";
-            this.суммаСДругойТриадойToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.суммаСДругойТриадойToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
             this.суммаСДругойТриадойToolStripMenuItem.Text = "Сумма с другой триадой";
             this.суммаСДругойТриадойToolStripMenuItem.Click += new System.EventHandler(this.button7_Click);
             // 
             // очиститьToolStripMenuItem
             // 
             this.очиститьToolStripMenuItem.Name = "очиститьToolStripMenuItem";
-            this.очиститьToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.очиститьToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
             this.очиститьToolStripMenuItem.Text = "Очистить";
             this.очиститьToolStripMenuItem.Click += new System.EventHandler(this.button6_Click);
             // 
@@ -470,6 +476,25 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Векторы";
             // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(16, 319);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(396, 23);
+            this.button10.TabIndex = 28;
+            this.button10.Text = "Очистить";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(17, 258);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(137, 13);
+            this.label16.TabIndex = 27;
+            this.label16.Text = "Скалярное произведение";
+            // 
             // button9
             // 
             this.button9.Location = new System.Drawing.Point(161, 274);
@@ -611,24 +636,26 @@
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 8;
             // 
-            // label16
+            // суммаВекторовToolStripMenuItem
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(17, 258);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(137, 13);
-            this.label16.TabIndex = 27;
-            this.label16.Text = "Скалярное произведение";
+            this.суммаВекторовToolStripMenuItem.Name = "суммаВекторовToolStripMenuItem";
+            this.суммаВекторовToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
+            this.суммаВекторовToolStripMenuItem.Text = "Сумма векторов";
+            this.суммаВекторовToolStripMenuItem.Click += new System.EventHandler(this.button8_Click);
             // 
-            // button10
+            // скалярноеПроизведениеToolStripMenuItem
             // 
-            this.button10.Location = new System.Drawing.Point(16, 319);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(396, 23);
-            this.button10.TabIndex = 28;
-            this.button10.Text = "Очистить";
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
+            this.скалярноеПроизведениеToolStripMenuItem.Name = "скалярноеПроизведениеToolStripMenuItem";
+            this.скалярноеПроизведениеToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
+            this.скалярноеПроизведениеToolStripMenuItem.Text = "Скалярное произведение";
+            this.скалярноеПроизведениеToolStripMenuItem.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // очисткаВекторовToolStripMenuItem
+            // 
+            this.очисткаВекторовToolStripMenuItem.Name = "очисткаВекторовToolStripMenuItem";
+            this.очисткаВекторовToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
+            this.очисткаВекторовToolStripMenuItem.Text = "Очистка векторов";
+            this.очисткаВекторовToolStripMenuItem.Click += new System.EventHandler(this.button10_Click);
             // 
             // Form1
             // 
@@ -733,6 +760,9 @@
         private System.Windows.Forms.TextBox scalproizv;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.ToolStripMenuItem суммаВекторовToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem скалярноеПроизведениеToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem очисткаВекторовToolStripMenuItem;
     }
 }
 
