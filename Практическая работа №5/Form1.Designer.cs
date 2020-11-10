@@ -51,10 +51,27 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.numFirstValue2 = new System.Windows.Forms.TextBox();
+            this.numSecondValue2 = new System.Windows.Forms.TextBox();
+            this.numThirdValue2 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.summa = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.button7 = new System.Windows.Forms.Button();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.суммаТриадыСЧисломToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.умножениеНаЧислоToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.проверкаНаРавенствоToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.суммаСДругойТриадойToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.очиститьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // numFirstValue
@@ -72,12 +89,18 @@
             this.выходToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(507, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(488, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // файлToolStripMenuItem
             // 
+            this.файлToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.суммаТриадыСЧисломToolStripMenuItem,
+            this.умножениеНаЧислоToolStripMenuItem,
+            this.проверкаНаРавенствоToolStripMenuItem,
+            this.суммаСДругойТриадойToolStripMenuItem,
+            this.очиститьToolStripMenuItem});
             this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
             this.файлToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.файлToolStripMenuItem.Text = "Файл";
@@ -217,7 +240,7 @@
             this.groupBox3.Controls.Add(this.button3);
             this.groupBox3.Location = new System.Drawing.Point(191, 229);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(291, 68);
+            this.groupBox3.Size = new System.Drawing.Size(291, 86);
             this.groupBox3.TabIndex = 11;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Проверка на равенство";
@@ -232,7 +255,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(16, 29);
+            this.button3.Location = new System.Drawing.Point(16, 32);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 2;
@@ -242,7 +265,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(12, 274);
+            this.button4.Location = new System.Drawing.Point(12, 292);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 12;
@@ -252,7 +275,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(93, 274);
+            this.button5.Location = new System.Drawing.Point(93, 292);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(92, 23);
             this.button5.TabIndex = 13;
@@ -260,11 +283,151 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(12, 259);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(173, 23);
+            this.button6.TabIndex = 14;
+            this.button6.Text = "Очистить";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // numFirstValue2
+            // 
+            this.numFirstValue2.Location = new System.Drawing.Point(45, 44);
+            this.numFirstValue2.Name = "numFirstValue2";
+            this.numFirstValue2.Size = new System.Drawing.Size(100, 20);
+            this.numFirstValue2.TabIndex = 15;
+            // 
+            // numSecondValue2
+            // 
+            this.numSecondValue2.Location = new System.Drawing.Point(174, 44);
+            this.numSecondValue2.Name = "numSecondValue2";
+            this.numSecondValue2.Size = new System.Drawing.Size(100, 20);
+            this.numSecondValue2.TabIndex = 16;
+            // 
+            // numThirdValue2
+            // 
+            this.numThirdValue2.Location = new System.Drawing.Point(304, 44);
+            this.numThirdValue2.Name = "numThirdValue2";
+            this.numThirdValue2.Size = new System.Drawing.Size(100, 20);
+            this.numThirdValue2.TabIndex = 17;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(45, 28);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(77, 13);
+            this.label5.TabIndex = 18;
+            this.label5.Text = "Первое число";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(171, 28);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(75, 13);
+            this.label6.TabIndex = 19;
+            this.label6.Text = "Второе число";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(301, 28);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(75, 13);
+            this.label7.TabIndex = 20;
+            this.label7.Text = "Третье число";
+            // 
+            // summa
+            // 
+            this.summa.Location = new System.Drawing.Point(224, 80);
+            this.summa.Name = "summa";
+            this.summa.ReadOnly = true;
+            this.summa.Size = new System.Drawing.Size(152, 20);
+            this.summa.TabIndex = 21;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(159, 83);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(59, 13);
+            this.label8.TabIndex = 22;
+            this.label8.Text = "Результат";
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(70, 77);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(75, 23);
+            this.button7.TabIndex = 23;
+            this.button7.Text = "Расчёт";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.label7);
+            this.groupBox4.Controls.Add(this.button7);
+            this.groupBox4.Controls.Add(this.numFirstValue2);
+            this.groupBox4.Controls.Add(this.label8);
+            this.groupBox4.Controls.Add(this.numSecondValue2);
+            this.groupBox4.Controls.Add(this.summa);
+            this.groupBox4.Controls.Add(this.numThirdValue2);
+            this.groupBox4.Controls.Add(this.label5);
+            this.groupBox4.Controls.Add(this.label6);
+            this.groupBox4.Location = new System.Drawing.Point(12, 321);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(470, 117);
+            this.groupBox4.TabIndex = 24;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Сумма триад";
+            // 
+            // суммаТриадыСЧисломToolStripMenuItem
+            // 
+            this.суммаТриадыСЧисломToolStripMenuItem.Name = "суммаТриадыСЧисломToolStripMenuItem";
+            this.суммаТриадыСЧисломToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.суммаТриадыСЧисломToolStripMenuItem.Text = "Сумма триады с числом";
+            this.суммаТриадыСЧисломToolStripMenuItem.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // умножениеНаЧислоToolStripMenuItem
+            // 
+            this.умножениеНаЧислоToolStripMenuItem.Name = "умножениеНаЧислоToolStripMenuItem";
+            this.умножениеНаЧислоToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.умножениеНаЧислоToolStripMenuItem.Text = "Умножение на число ";
+            this.умножениеНаЧислоToolStripMenuItem.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // проверкаНаРавенствоToolStripMenuItem
+            // 
+            this.проверкаНаРавенствоToolStripMenuItem.Name = "проверкаНаРавенствоToolStripMenuItem";
+            this.проверкаНаРавенствоToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.проверкаНаРавенствоToolStripMenuItem.Text = "Проверка на равенство";
+            this.проверкаНаРавенствоToolStripMenuItem.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // суммаСДругойТриадойToolStripMenuItem
+            // 
+            this.суммаСДругойТриадойToolStripMenuItem.Name = "суммаСДругойТриадойToolStripMenuItem";
+            this.суммаСДругойТриадойToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.суммаСДругойТриадойToolStripMenuItem.Text = "Сумма с другой триадой";
+            this.суммаСДругойТриадойToolStripMenuItem.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // очиститьToolStripMenuItem
+            // 
+            this.очиститьToolStripMenuItem.Name = "очиститьToolStripMenuItem";
+            this.очиститьToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.очиститьToolStripMenuItem.Text = "Очистить";
+            this.очиститьToolStripMenuItem.Click += new System.EventHandler(this.button6_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(507, 304);
+            this.ClientSize = new System.Drawing.Size(488, 447);
+            this.Controls.Add(this.groupBox4);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.groupBox3);
@@ -281,7 +444,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Практическая 6";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -290,6 +453,8 @@
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -320,6 +485,22 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.TextBox numFirstValue2;
+        private System.Windows.Forms.TextBox numSecondValue2;
+        private System.Windows.Forms.TextBox numThirdValue2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox summa;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.ToolStripMenuItem суммаТриадыСЧисломToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem умножениеНаЧислоToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem проверкаНаРавенствоToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem суммаСДругойТриадойToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem очиститьToolStripMenuItem;
+        private System.Windows.Forms.GroupBox groupBox4;
     }
 }
 

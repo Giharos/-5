@@ -8,11 +8,9 @@ namespace Lib_5
 {
     public class Triad
     {
-        /// Создать класс Pair (пара четных чисел).
+        /// Создать класс Triad (тройка чисел).
         /// Создать необходимые методы и свойства.
-        /// Определить метод вычисления произведения на число,суммы с числом,проверка на равенство.
-        /// Создать перегруженный метод для вычисления.
-        
+        /// Определить метод вычисления произведения на число,суммы с числом,проверка на равенство.    
         
         //Поля класса
         private int _aFirstNumber;
@@ -20,13 +18,12 @@ namespace Lib_5
         private int _aThirdNumber;
         private int _Value;
 
-        public Triad(int aFirstNumber, int aSecondNumber,int aThirdNumber, int Value1)
+        public Triad(int aFirstNumber, int aSecondNumber,int aThirdNumber)
         {
             //Поля класса
             _aFirstNumber = aFirstNumber;
             _aSecondNumber = aSecondNumber;
             _aThirdNumber = aThirdNumber;
-            _Value = Value1;
         }
         //Св-ва 1-го числа
         public int FirstNumber
@@ -71,32 +68,25 @@ namespace Lib_5
             }
         }
         //Св-ва числа,с которым производятся операции
-        public int Value1
-        {
-            get
-            {
-                return _Value;
-            }
-            set
-            {
-                _Value = Value1;
-            }
-        }
+       
 
         //Сумма  триады с числом
-        public void GetMultiplay1()
+        public static int operator +(Triad triad,int value)
         {
-            _aFirstNumber += Value1;
-            _aSecondNumber += Value1;
-            _aThirdNumber += Value1;
-
+            int result = triad.FirstNumber + triad.SecondNumber + triad.ThirdNumber + value;
+            return result;
+        }
+        public static int operator +(Triad triad, Triad triad2)
+        {
+            int result = triad.FirstNumber + triad.SecondNumber + triad.ThirdNumber + triad2.FirstNumber + triad2.SecondNumber + triad2.ThirdNumber;
+            return result;
         }
         //Произведение трады с числом
-        public void GetMultiplay2()
+        public void GetMultiplay2(int value)
         {
-            _aFirstNumber *= Value1;
-            _aSecondNumber *= Value1;
-            _aThirdNumber *= Value1;
+            _aFirstNumber *= value;
+            _aSecondNumber *= value;
+            _aThirdNumber *= value;
 
         }
         //Проверка на равенство

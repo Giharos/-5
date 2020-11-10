@@ -26,12 +26,12 @@ namespace Практическая_работа__5
                 int firstNumber = Convert.ToInt32(numFirstValue.Text);
                 int secondNumber = Convert.ToInt32(numSecondValue.Text);
                 int thirdNumber = Convert.ToInt32(numThirdValue.Text);
-                int chislo = Convert.ToInt32(number.Text);
-                Lib_5.Triad triadNumbers = new Triad(firstNumber, secondNumber, thirdNumber, chislo);
+                int chislo = Convert.ToInt32(number.Text);               
+                Lib_5.Triad triadNumbers = new Triad(firstNumber, secondNumber, thirdNumber);                  
                 //Сумма
-                triadNumbers.GetMultiplay1();
+                int sum = triadNumbers + chislo;
                 //Вывод
-                rez1.Text = triadNumbers.FirstNumber.ToString() + triadNumbers.SecondNumber.ToString() + triadNumbers.ThirdNumber.ToString();
+                rez1.Text = sum.ToString();
             }
             else MessageBox.Show("Введите правильное значение");
             }
@@ -46,9 +46,9 @@ namespace Практическая_работа__5
                 int secondNumber = Convert.ToInt32(numSecondValue.Text);
                 int thirdNumber = Convert.ToInt32(numThirdValue.Text);
                 int chislo = Convert.ToInt32(number.Text);
-                Lib_5.Triad triadNumbers = new Triad(firstNumber, secondNumber, thirdNumber, chislo);
+                Lib_5.Triad triadNumbers = new Triad(firstNumber, secondNumber, thirdNumber);
                 //Произведение
-                triadNumbers.GetMultiplay2();
+                triadNumbers.GetMultiplay2(chislo);
                 //Вывод
                 rez2.Text = triadNumbers.FirstNumber.ToString() + triadNumbers.SecondNumber.ToString() + triadNumbers.ThirdNumber.ToString();
             }
@@ -65,7 +65,7 @@ namespace Практическая_работа__5
                 int secondNumber = Convert.ToInt32(numSecondValue.Text);
                 int thirdNumber = Convert.ToInt32(numThirdValue.Text);
                 int chislo = Convert.ToInt32(number.Text);
-                Lib_5.Triad triadNumbers = new Triad(firstNumber, secondNumber, thirdNumber, chislo);
+                Lib_5.Triad triadNumbers = new Triad(firstNumber, secondNumber, thirdNumber);
                 //Произведение
                 triadNumbers.Proverka();
                 //Вывод
@@ -82,9 +82,40 @@ namespace Практическая_работа__5
 
         private void button5_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Практическая работа №5\n" +
+            MessageBox.Show("Практическая работа №6\n" +
                 "Создать класс Triad (тройка чисел). Создать необходимые методы и свойства. Определить методы с операциями сложения с числом, умножения на число, проверки на равенство. Создать перегруженный метод для сложения элементов одой триады с другой триадой.\n " +
                 "Платов Андрей ИСП-31");
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            numFirstValue.Clear();
+            numSecondValue.Clear();
+            numThirdValue.Clear();
+            number.Clear();
+            rez1.Clear();
+            rez2.Clear();
+            proverka.Clear();
+            numFirstValue2.Clear();
+            numSecondValue2.Clear();
+            numThirdValue2.Clear();
+            summa.Clear();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            int firstNumber = Convert.ToInt32(numFirstValue.Text);
+            int secondNumber = Convert.ToInt32(numSecondValue.Text);
+            int thirdNumber = Convert.ToInt32(numThirdValue.Text);
+            int firstNumber2 = Convert.ToInt32(numFirstValue2.Text);
+            int secondNumber2 = Convert.ToInt32(numSecondValue2.Text);
+            int thirdNumber2 = Convert.ToInt32(numThirdValue2.Text);
+            Lib_5.Triad triadNumbers = new Triad(firstNumber, secondNumber, thirdNumber);
+            Lib_5.Triad triadNumbers2 = new Triad(firstNumber2, secondNumber2, thirdNumber2);
+            //Сумма
+            int sum = triadNumbers + triadNumbers2;
+            //Вывод
+            summa.Text = sum.ToString();
         }
     }
     }
