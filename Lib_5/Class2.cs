@@ -8,25 +8,22 @@ namespace Lib_5
 {
     public class Triad
     {
-        /// Создать класс Pair (пара четных чисел).
+        /// Создать класс Triad (тройка чисел).
         /// Создать необходимые методы и свойства.
-        /// Определить метод вычисления произведения на число,суммы с числом,проверка на равенство.
-        /// Создать перегруженный метод для вычисления.
-        
-        
+        /// Определить метод вычисления произведения на число,суммы с числом,проверка на равенство.    
+
         //Поля класса
         private int _aFirstNumber;
         private int _aSecondNumber;
         private int _aThirdNumber;
         private int _Value;
 
-        public Triad(int aFirstNumber, int aSecondNumber,int aThirdNumber, int Value1)
+        public Triad(int aFirstNumber, int aSecondNumber, int aThirdNumber)
         {
             //Поля класса
             _aFirstNumber = aFirstNumber;
             _aSecondNumber = aSecondNumber;
             _aThirdNumber = aThirdNumber;
-            _Value = Value1;
         }
         //Св-ва 1-го числа
         public int FirstNumber
@@ -52,7 +49,7 @@ namespace Lib_5
             }
             //Устанавливаем значение
             set
-            { 
+            {
                 _aSecondNumber = value;
             }
         }
@@ -71,32 +68,25 @@ namespace Lib_5
             }
         }
         //Св-ва числа,с которым производятся операции
-        public int Value1
-        {
-            get
-            {
-                return _Value;
-            }
-            set
-            {
-                _Value = Value1;
-            }
-        }
+
 
         //Сумма  триады с числом
-        public void GetMultiplay1()
+        public static int operator +(Triad triad, int value)
         {
-            _aFirstNumber += Value1;
-            _aSecondNumber += Value1;
-            _aThirdNumber += Value1;
-
+            int result = triad.FirstNumber + triad.SecondNumber + triad.ThirdNumber + value;
+            return result;
         }
-        //Произведение трады с числом
-        public void GetMultiplay2()
+        public static int operator +(Triad triad, Triad triad2)
         {
-            _aFirstNumber *= Value1;
-            _aSecondNumber *= Value1;
-            _aThirdNumber *= Value1;
+            int result = triad.FirstNumber + triad.SecondNumber + triad.ThirdNumber + triad2.FirstNumber + triad2.SecondNumber + triad2.ThirdNumber;
+            return result;
+        }
+        //Произведение триады с числом
+        public void GetMultiplay2(int value)
+        {
+            _aFirstNumber *= value;
+            _aSecondNumber *= value;
+            _aThirdNumber *= value;
 
         }
         //Проверка на равенство
@@ -105,9 +95,28 @@ namespace Lib_5
             if (_aFirstNumber == _aSecondNumber && _aSecondNumber == _aThirdNumber)
             {
                 return true;
-            } 
+            }
             else return false;
         }
 
+    }
+
+
+    public class Vector3D : Triad
+    {
+        public Vector3D(int aFirstNumber, int aSecondNumber, int aThirdNumber) :
+            base(aFirstNumber, aSecondNumber, aThirdNumber)
+        {
+        }
+        public static int operator +(Vector3D triad, Vector3D triad2)
+        {
+            int result = triad.FirstNumber + triad.SecondNumber + triad.ThirdNumber + triad2.FirstNumber + triad2.SecondNumber + triad2.ThirdNumber;
+            return result;
+        }
+        public int ScalProizv(Vector3D triad, Vector3D triad2)
+        {
+            int proizv = (triad.FirstNumber * triad2.FirstNumber) + (triad.SecondNumber * triad2.SecondNumber) + (triad.ThirdNumber * triad2.ThirdNumber);
+            return proizv;
+        }
     }
 }
